@@ -1,0 +1,15 @@
+.first-line {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bookmarks ul {
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    padding: 0;
+}
+
+.btn-success {
+    flex-grow: 1;
+}

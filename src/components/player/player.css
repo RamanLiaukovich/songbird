@@ -1,0 +1,20 @@
+.player-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.jumbotron {
+    padding: 10px;
+}
+
+.img-container {
+    width: 20%;
+}
+
+.player-container {
+    width: 80%;
+}
+
+.rhap_container {
+    background-color: blue;
+}
