@@ -8,8 +8,11 @@
     border-radius: 5px;
     display: flex;
     padding: 0;
+    flex-wrap: wrap;
+
 }
 
 .btn-success {
     flex-grow: 1;
 }
+

@@ -1,0 +1,48 @@
+.items {
+    display: flex;
+}
+
+.item-list {
+    width: 50%;
+}
+
+.list-group-item {
+    display: flex;
+    cursor: pointer;
+}
+
+.list-group-item div{
+    align-self: center;
+    margin-right: 10px;
+}
+
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: grey;
+}
+
+.success {
+    background: green;
+}
+
+.mistake {
+    background: red;
+}
+
+@media (max-width: 768px) {
+    .items {
+        display: block;
+    }
+
+    .item-list {
+        width: 100%;
+    }
+
+    .item-description-container {
+        margin: 20px 0 !important;
+        width: 100% !important;
+    }
+}
