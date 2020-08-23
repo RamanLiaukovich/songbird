@@ -3,18 +3,30 @@ import './player.css';
 
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
+import songData from '../data/data'
 
 export default class Player extends Component {
+
+    state = {
+        name: null,
+        population: null,
+        rotationPeriod: null,
+        diameter: null,
+    };
+
     render() {
+
+        const { image, artist, songName, audio } = songData[5][5];
+
         return(
             <div className="jumbotron player-wrapper">
                 <div className="img-container">
-                    <img src="https://i.pinimg.com/originals/63/2d/6f/632d6f00a809cf8c77f65142395458de.png" alt="item"/>
+                    <img src={ image } alt="item"/>
                 </div>
                 <div className="player-container">
-                    <h2 className="item-name">Журавль</h2>
+                    <h2 className="item-name">{ artist } - { songName }</h2>
                     <div className="player">
-                        <AudioPlayer src="https://music.yandex.by/album/11735202/track/69827710" 
+                        <AudioPlayer src={ audio }
                             showJumpControls={false} 
                             loop={true} />
                     </div>
