@@ -1,45 +1,46 @@
 import React, { Component } from 'react';
 import './item-list.css';
 
-import ItemDescription from '../item-description';
+
+// import songData from '../data/data'
 
 export default class ItemList extends Component {
+
+    // state = {
+    //     songsList: null,
+    // };
+
+    // componentDidMount() {
+    //     this.getSongsList(this.props.genre);
+    // }
     
-    render() {
+
+
+    renderItems(arr) {
         const listItemClass = "list-group-item list-group-item-action";
+        if(arr) {
+            return arr.map(({id, artist}) => {
+                return(
+                    <li className={listItemClass} key={id} onClick={() => this.props.onItemSelected(id)}>
+                        <div className="indicator"></div>
+                        {artist}
+                    </li>
+                );
+            });
+        }
+    };
+
+    render() {
+        // console.log(this.state);
+
+        // const { genre } = this.props;
+        // const itemsList = this.getSongsList(genre);
+        const items = this.renderItems(this.props.itemList);
 
         return(
-            <div className="items">
-                <div className="item-list">
-                    <ul className="list-group">
-                        <li className={listItemClass}>
-                            <div className="indicator"></div>
-                            Ворона
-                        </li>
-                        <li className={listItemClass}>
-                            <div className="indicator"></div>
-                            Сорока
-                        </li>
-                        <li className={listItemClass}>
-                            <div className="indicator"></div>
-                            Ястреб
-                        </li>
-                        <li className={listItemClass}>
-                            <div className="indicator"></div>
-                            Кукушка
-                        </li>
-                        <li className={listItemClass}>
-                            <div className="indicator"></div>
-                            Журавль
-                        </li>
-                        <li className={listItemClass}>
-                            <div className="indicator"></div>
-                            Лебедь
-                        </li>
-                    </ul>
-                </div>
-                <ItemDescription />
-            </div>
+            <ul className="list-group">
+                {items}
+            </ul>
         )
     };
 };
