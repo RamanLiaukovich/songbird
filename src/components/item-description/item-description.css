@@ -1,6 +1,6 @@
 .item-description-container {
-    width: 50%;
     margin-left: 20px;
+    grid-area: description;
 }
 
 .item-description-header {

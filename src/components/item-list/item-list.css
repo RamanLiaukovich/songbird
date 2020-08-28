@@ -1,9 +1,13 @@
-.items {
+/* .items {
     display: flex;
 }
 
 .item-list {
     width: 50%;
+} */
+
+.list-group {
+    grid-area: ul;
 }
 
 .list-group-item {

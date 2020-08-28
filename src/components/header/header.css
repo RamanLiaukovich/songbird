@@ -1,3 +1,7 @@
+.header {
+    grid-area: head;
+}
+
 .first-line {
     display: flex;
     justify-content: space-between;

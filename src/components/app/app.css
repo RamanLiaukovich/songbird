@@ -1,4 +1,17 @@
 .songbird-app {
     max-width: 1100px;
     margin: 0 auto;
+    display: grid;
+    grid-template-areas: 
+    'head head'
+    'player player'
+    'ul description'
+    'footer footer';
+    grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 768px) {
+    .songbird-app {
+        display: block;
+    }
 }
