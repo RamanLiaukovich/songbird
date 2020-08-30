@@ -3,3 +3,7 @@ button {
     margin-bottom: 20px;
     grid-area: footer;
 }
+
+.disabled {
+    pointer-events: none;
+}

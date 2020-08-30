@@ -8,6 +8,12 @@
     'ul description'
     'footer footer';
     grid-template-columns: 1fr 1fr;
+};
+
+.songbird-app-end {
+    text-align: -webkit-center;
+    margin: auto;
+    transform: translateY(100%);
 }
 
 @media (max-width: 768px) {

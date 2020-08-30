@@ -13,11 +13,14 @@ export default class ItemList extends Component {
     // componentDidMount() {
     //     this.getSongsList(this.props.genre);
     // }
-    
+
 
 
     renderItems(arr) {
+        const { guessedSongId, selectedItem } = this.props;
+        console.log(guessedSongId, selectedItem);
         const listItemClass = "list-group-item list-group-item-action";
+
         if(arr) {
             return arr.map(({id, artist}) => {
                 return(

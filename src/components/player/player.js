@@ -7,14 +7,40 @@ import 'react-h5-audio-player/lib/styles.css';
 
 export default class Player extends Component {
 
-    // state = {};
+    state = {
+        image: "https://droidmania.ru/sites/default/files/downloads/title-2015/1_865.png",
+        artist: "****",
+        songName: "****",
+    };
 
-    // componentDidMount() {
-    //     console.log(this.props.guessedSong)
-    //     this.setState({
-    //         state: this.props.guessedSong,
-    //     });
-    // };
+
+    componentDidMount() {
+        this.openName();
+    };
+
+    componentDidUpdate(prevProps) {
+        if(this.props !== prevProps) {
+            this.openName();
+        }
+    }
+
+    openName() {
+        if(this.props.isGuessed) {
+            const { image, artist, songName } = this.props.guessedSong;
+            console.log('Guessed!')
+            this.setState({
+                image,
+                artist,
+                songName
+            });
+        } else {
+            this.setState({
+                image: "https://droidmania.ru/sites/default/files/downloads/title-2015/1_865.png",
+                artist: "****",
+                songName: "****",        
+            })
+        }
+    }
 
     // updateSong() {
     //     const { guessedSong, itemList } = this.props;
@@ -34,16 +60,22 @@ export default class Player extends Component {
     // };
 
     render() {
+
         if(this.props.guessedSong) {
-            const { image, artist, songName, audio } = this.props.guessedSong;
+
+            const { audio } = this.props.guessedSong;
+
+            if(this.props.isGuessed) {
+
+            }
 
             return(
                 <div className="jumbotron player-wrapper">
                     <div className="img-container">
-                        <img src={ image } alt="item"/>
+                        <img src={ this.state.image } alt="item"/>
                     </div>
                     <div className="player-container">
-                        <h2 className="item-name">{ artist } - { songName }</h2>
+                        <h2 className="item-name">{ this.state.artist } - { this.state.songName }</h2>
                         <div className="player">
                             <AudioPlayer src={ audio }
                                 showJumpControls={false} 

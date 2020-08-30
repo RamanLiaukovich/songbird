@@ -171,7 +171,7 @@ const songData = [
             genre: "Rock",
             description: `In November 2016, Maeson released his debut single "Cringe". In 2018, Maeson performed at festivals such as Bonnaroo, Lollapalooza, and Forecastle.`,
             image: "https://crown-music.ru/uploads/posts/2019-04/5cc607aff1b79.jpg",
-            audio: "https://crown-music.ru/dw/7509d5dba04ebacc46d97e88ffecbd10/",
+            audio: "https://download.mp3free-is.fun/k/Matt-Maeson-Cringe.mp3",
             video: "https://www.youtube.com/watch?v=eoJtlPQzqkQ",
         },
         {
